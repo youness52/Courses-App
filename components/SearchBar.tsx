@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet, TextInput, View, Pressable } from 'react-native';
-<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons'; // Use Feather icons
-=======
-import { Search, X } from 'lucide-react-native';
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 
 interface SearchBarProps {
@@ -22,11 +18,7 @@ export default function SearchBar({
 }: SearchBarProps) {
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
       <Feather name="search" size={20} color={Colors.textSecondary} style={styles.icon} />
-=======
-      <Search size={20} color={Colors.textSecondary} style={styles.icon} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
       
       <TextInput
         style={styles.input}
