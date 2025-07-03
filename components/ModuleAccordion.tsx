@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
-<<<<<<< HEAD
 import { useRouter } from 'expo-router';
 import { Feather } from '@expo/vector-icons'; // import Feather
-=======
-import { ChevronDown, ChevronUp, CheckCircle, Circle, Play } from 'lucide-react-native';
-import { useRouter } from 'expo-router';
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 import { Module } from '@/types/course';
 import { useCourseStore } from '@/store/courseStore';
@@ -40,11 +35,6 @@ export default function ModuleAccordion({ module, courseId, index }: ModuleAccor
   const formatDuration = (minutes: number) => {
     const hours = Math.floor(minutes / 60);
     const mins = minutes % 60;
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     if (hours > 0) {
       return `${hours}h ${mins > 0 ? `${mins}m` : ''}`;
     }
@@ -58,25 +48,15 @@ export default function ModuleAccordion({ module, courseId, index }: ModuleAccor
   const getContentIcon = (contentType: string) => {
     switch (contentType) {
       case 'video':
-<<<<<<< HEAD
         return <Feather name="play" size={16} color={Colors.primary} />;
       case 'quiz':
         return <Feather name="check-circle" size={16} color={Colors.warning} />;
-=======
-        return <Play size={16} color={Colors.primary} />;
-      case 'quiz':
-        return <CheckCircle size={16} color={Colors.warning} />;
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
       case 'pdf':
         return <Text style={styles.contentTypeIcon}>📄</Text>;
       case 'text':
         return <Text style={styles.contentTypeIcon}>📝</Text>;
       default:
-<<<<<<< HEAD
         return <Feather name="play" size={16} color={Colors.primary} />;
-=======
-        return <Play size={16} color={Colors.primary} />;
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     }
   };
 
@@ -102,15 +82,9 @@ export default function ModuleAccordion({ module, courseId, index }: ModuleAccor
         </View>
         
         {expanded ? (
-<<<<<<< HEAD
           <Feather name="chevron-up" size={20} color={Colors.text} />
         ) : (
           <Feather name="chevron-down" size={20} color={Colors.text} />
-=======
-          <ChevronUp size={20} color={Colors.text} />
-        ) : (
-          <ChevronDown size={20} color={Colors.text} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
         )}
       </Pressable>
       
@@ -148,15 +122,9 @@ export default function ModuleAccordion({ module, courseId, index }: ModuleAccor
                   }}
                 >
                   {lesson.isCompleted ? (
-<<<<<<< HEAD
                     <Feather name="check-circle" size={20} color={Colors.success} />
                   ) : (
                     <Feather name="circle" size={20} color={Colors.textSecondary} />
-=======
-                    <CheckCircle size={20} color={Colors.success} />
-                  ) : (
-                    <Circle size={20} color={Colors.textSecondary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
                   )}
                 </Pressable>
               </Pressable>
@@ -257,8 +225,4 @@ const styles = StyleSheet.create({
   completionButton: {
     padding: 4,
   },
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6

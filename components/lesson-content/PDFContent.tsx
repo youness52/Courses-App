@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, Pressable, Linking, Platform } from 'react-native';
-<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons';
-=======
-import { ExternalLink, FileText } from 'lucide-react-native';
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 
 interface PDFContentProps {
@@ -40,30 +36,17 @@ export default function PDFContent({ pdfUrl }: PDFContentProps) {
   return (
     <View style={styles.container}>
       <View style={styles.pdfPlaceholder}>
-<<<<<<< HEAD
         <Feather name="file-text" size={64} color={Colors.primary} />
-=======
-        <FileText size={64} color={Colors.primary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
         <Text style={styles.pdfTitle}>PDF Document</Text>
         <Text style={styles.pdfDescription}>
           This lesson contains a PDF document with important information and resources.
         </Text>
-<<<<<<< HEAD
 
         <Pressable style={styles.openButton} onPress={handleOpenPDF}>
           <Feather name="external-link" size={20} color="#fff" />
           <Text style={styles.openButtonText}>Open PDF</Text>
         </Pressable>
 
-=======
-        
-        <Pressable style={styles.openButton} onPress={handleOpenPDF}>
-          <ExternalLink size={20} color="#fff" />
-          <Text style={styles.openButtonText}>Open PDF</Text>
-        </Pressable>
-        
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
         <Text style={styles.note}>
           The PDF will open in your default PDF viewer or browser.
         </Text>
@@ -123,8 +106,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontStyle: 'italic',
   },
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6

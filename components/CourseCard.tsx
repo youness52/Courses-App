@@ -1,11 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Pressable, Image } from 'react-native';
 import { useRouter } from 'expo-router';
-<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons'; // ✅ Feather icons
-=======
-import { BookOpen, Star, Users } from 'lucide-react-native';
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 import { Course } from '@/types/course';
 
@@ -55,29 +51,17 @@ export default function CourseCard({ course, compact = false }: CourseCardProps)
         
         <View style={styles.metaContainer}>
           <View style={styles.metaItem}>
-<<<<<<< HEAD
             <Feather name="book-open" size={14} color={Colors.textSecondary} />
-=======
-            <BookOpen size={14} color={Colors.textSecondary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             <Text style={styles.metaText}>{formatDuration(course.duration)}</Text>
           </View>
           
           <View style={styles.metaItem}>
-<<<<<<< HEAD
             <Feather name="star" size={14} color={Colors.warning} />
-=======
-            <Star size={14} color={Colors.warning} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             <Text style={styles.metaText}>{course.rating}</Text>
           </View>
           
           <View style={styles.metaItem}>
-<<<<<<< HEAD
             <Feather name="users" size={14} color={Colors.textSecondary} />
-=======
-            <Users size={14} color={Colors.textSecondary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             <Text style={styles.metaText}>
               {course.studentsCount > 1000 
                 ? `${(course.studentsCount / 1000).toFixed(1)}k` 
@@ -94,10 +78,6 @@ export default function CourseCard({ course, compact = false }: CourseCardProps)
   );
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.card,

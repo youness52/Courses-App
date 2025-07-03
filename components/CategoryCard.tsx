@@ -1,11 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
-<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons'; // ✅ Feather icons
-=======
-import { Palette, Code, Briefcase, TrendingUp, Camera, Music } from 'lucide-react-native';
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 import { Category } from '@/types/course';
 
@@ -27,7 +23,6 @@ export default function CategoryCard({ category, isSelected = false, onSelect }:
   };
 
   const getIcon = () => {
-<<<<<<< HEAD
     const iconProps = {
       size: 24,
       color: isSelected ? '#fff' : Colors.primary,
@@ -65,49 +60,6 @@ export default function CategoryCard({ category, isSelected = false, onSelect }:
         style={[
           styles.name,
           isSelected && styles.selectedName,
-=======
-    const iconProps = { 
-      size: 24, 
-      color: isSelected ? '#fff' : Colors.primary 
-    };
-
-    switch (category.icon) {
-      case 'palette':
-        return <Palette {...iconProps} />;
-      case 'code':
-        return <Code {...iconProps} />;
-      case 'briefcase':
-        return <Briefcase {...iconProps} />;
-      case 'trending-up':
-        return <TrendingUp {...iconProps} />;
-      case 'camera':
-        return <Camera {...iconProps} />;
-      case 'music':
-        return <Music {...iconProps} />;
-      default:
-        return <Palette {...iconProps} />;
-    }
-  };
-
-  return (
-    <Pressable 
-      style={[
-        styles.container, 
-        isSelected && styles.selectedContainer
-      ]} 
-      onPress={handlePress}
-    >
-      <View style={[
-        styles.iconContainer,
-        isSelected && styles.selectedIconContainer
-      ]}>
-        {getIcon()}
-      </View>
-      <Text 
-        style={[
-          styles.name,
-          isSelected && styles.selectedName
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
         ]}
         numberOfLines={1}
       >
@@ -152,8 +104,4 @@ const styles = StyleSheet.create({
   selectedName: {
     color: '#fff',
   },
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6

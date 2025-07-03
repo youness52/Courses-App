@@ -1,11 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Pressable, ScrollView, Alert } from 'react-native';
 import { useCourseStore } from '@/store/courseStore';
-<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons';
-=======
-import { BookOpen, Award, Clock, Settings, User, Bell, CreditCard, HelpCircle, LogOut, Edit3 } from 'lucide-react-native';
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 
 export default function ProfileScreen() {
@@ -66,10 +62,6 @@ export default function ProfileScreen() {
       [
         { text: 'Cancel', style: 'cancel' },
         { text: 'Log Out', style: 'destructive', onPress: () => {
-<<<<<<< HEAD
-=======
-          // Logout functionality would be implemented here
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
           Alert.alert('Logged Out', 'You have been successfully logged out.');
         }}
       ]
@@ -81,7 +73,6 @@ export default function ProfileScreen() {
       <View style={styles.header}>
         <View style={styles.avatarContainer}>
           <Image 
-<<<<<<< HEAD
             source={{ uri: 'https://zbair.net/gallery_gen/5c92afa9f73a229fb01284027093fce7_fit.jpg?ts=1750241213' }} 
             style={styles.avatar}
           />
@@ -93,48 +84,23 @@ export default function ProfileScreen() {
         <Text style={styles.name}>Youness</Text>
         <Text style={styles.email}>youness@zbair.net</Text>
         <Text style={styles.joinDate}>Member since January 2025</Text>
-=======
-            source={{ uri: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' }} 
-            style={styles.avatar}
-          />
-          <Pressable style={styles.editAvatarButton} onPress={handleEditProfile}>
-            <Edit3 size={16} color="#fff" />
-          </Pressable>
-        </View>
-        
-        <Text style={styles.name}>John Doe</Text>
-        <Text style={styles.email}>john.doe@example.com</Text>
-        <Text style={styles.joinDate}>Member since January 2024</Text>
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
       </View>
       
       <View style={styles.statsContainer}>
         <View style={styles.statCard}>
-<<<<<<< HEAD
           <Feather name="book-open" size={24} color={Colors.primary} />
-=======
-          <BookOpen size={24} color={Colors.primary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
           <Text style={styles.statValue}>{enrolledCoursesList.length}</Text>
           <Text style={styles.statLabel}>Enrolled</Text>
         </View>
         
         <View style={styles.statCard}>
-<<<<<<< HEAD
           <Feather name="award" size={24} color={Colors.success} />
-=======
-          <Award size={24} color={Colors.success} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
           <Text style={styles.statValue}>{completedCourses}</Text>
           <Text style={styles.statLabel}>Completed</Text>
         </View>
         
         <View style={styles.statCard}>
-<<<<<<< HEAD
           <Feather name="clock" size={24} color={Colors.warning} />
-=======
-          <Clock size={24} color={Colors.warning} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
           <Text style={styles.statValue}>{totalHours.toFixed(0)}</Text>
           <Text style={styles.statLabel}>Hours</Text>
         </View>
@@ -146,11 +112,7 @@ export default function ProfileScreen() {
         <View style={styles.progressCard}>
           <View style={styles.progressItem}>
             <View style={styles.progressIconContainer}>
-<<<<<<< HEAD
               <Feather name="book-open" size={20} color="#fff" />
-=======
-              <BookOpen size={20} color="#fff" />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             </View>
             <View style={styles.progressContent}>
               <Text style={styles.progressTitle}>Courses in Progress</Text>
@@ -160,11 +122,7 @@ export default function ProfileScreen() {
           
           <View style={styles.progressItem}>
             <View style={[styles.progressIconContainer, { backgroundColor: Colors.success }]}>
-<<<<<<< HEAD
               <Feather name="award" size={20} color="#fff" />
-=======
-              <Award size={20} color="#fff" />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             </View>
             <View style={styles.progressContent}>
               <Text style={styles.progressTitle}>Certificates Earned</Text>
@@ -174,11 +132,7 @@ export default function ProfileScreen() {
           
           <View style={styles.progressItem}>
             <View style={[styles.progressIconContainer, { backgroundColor: Colors.warning }]}>
-<<<<<<< HEAD
               <Feather name="clock" size={20} color="#fff" />
-=======
-              <Clock size={20} color="#fff" />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             </View>
             <View style={styles.progressContent}>
               <Text style={styles.progressTitle}>Learning Time</Text>
@@ -194,11 +148,7 @@ export default function ProfileScreen() {
         <View style={styles.menuContainer}>
           <Pressable style={styles.menuItem} onPress={handleEditProfile}>
             <View style={styles.menuItemLeft}>
-<<<<<<< HEAD
               <Feather name="user" size={20} color={Colors.primary} />
-=======
-              <User size={20} color={Colors.primary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.menuItemText}>Edit Profile</Text>
             </View>
             <Text style={styles.menuItemArrow}>›</Text>
@@ -206,11 +156,7 @@ export default function ProfileScreen() {
           
           <Pressable style={styles.menuItem} onPress={handleNotifications}>
             <View style={styles.menuItemLeft}>
-<<<<<<< HEAD
               <Feather name="bell" size={20} color={Colors.primary} />
-=======
-              <Bell size={20} color={Colors.primary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.menuItemText}>Notifications</Text>
             </View>
             <Text style={styles.menuItemArrow}>›</Text>
@@ -218,11 +164,7 @@ export default function ProfileScreen() {
           
           <Pressable style={styles.menuItem} onPress={handlePaymentMethods}>
             <View style={styles.menuItemLeft}>
-<<<<<<< HEAD
               <Feather name="credit-card" size={20} color={Colors.primary} />
-=======
-              <CreditCard size={20} color={Colors.primary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.menuItemText}>Payment Methods</Text>
             </View>
             <Text style={styles.menuItemArrow}>›</Text>
@@ -230,11 +172,7 @@ export default function ProfileScreen() {
           
           <Pressable style={styles.menuItem} onPress={handleHelp}>
             <View style={styles.menuItemLeft}>
-<<<<<<< HEAD
               <Feather name="help-circle" size={20} color={Colors.primary} />
-=======
-              <HelpCircle size={20} color={Colors.primary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.menuItemText}>Help & Support</Text>
             </View>
             <Text style={styles.menuItemArrow}>›</Text>
@@ -244,11 +182,7 @@ export default function ProfileScreen() {
       
       <View style={styles.section}>
         <Pressable style={styles.logoutButton} onPress={handleLogout}>
-<<<<<<< HEAD
           <Feather name="log-out" size={20} color={Colors.error} />
-=======
-          <LogOut size={20} color={Colors.error} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
           <Text style={styles.logoutText}>Log Out</Text>
         </Pressable>
       </View>
@@ -261,12 +195,9 @@ export default function ProfileScreen() {
   );
 }
 
-<<<<<<< HEAD
 // ...styles remain unchanged
 
 
-=======
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 const styles = StyleSheet.create({
   container: {
     flex: 1,
