@@ -22,11 +22,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-<<<<<<< HEAD
       "package": "com.younessz.coursesapp"
-=======
-      "package": "app.younessz.courses-app"
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
@@ -41,7 +37,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-<<<<<<< HEAD
     },
     "extra": {
       "router": {
@@ -53,8 +48,3 @@
     }
   }
 }
-=======
-    }
-  }
-}
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
