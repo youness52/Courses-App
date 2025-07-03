@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "app.younessz.courses-app"
+      "package": "com.younessz.coursesapp"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
