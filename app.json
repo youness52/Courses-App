@@ -37,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://zbair.net/"
+      },
+      "eas": {
+        "projectId": "1baf0a18-054f-41f7-98cf-953a84a7bf4d"
+      }
     }
   }
 }
