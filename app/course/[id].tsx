@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, Pressable, Platform } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
+<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons';
+=======
+import { Star, Users, Clock, Bookmark, BookmarkCheck, Share2 } from 'lucide-react-native';
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import { useCourseStore } from '@/store/courseStore';
 import Colors from '@/constants/colors';
 import ProgressBar from '@/components/ProgressBar';
@@ -73,12 +77,20 @@ export default function CourseDetailScreen() {
           
           <View style={styles.metaContainer}>
             <View style={styles.metaItem}>
+<<<<<<< HEAD
               <Feather name="star" size={16} color={Colors.warning} />
+=======
+              <Star size={16} color={Colors.warning} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.metaText}>{course.rating}</Text>
             </View>
             
             <View style={styles.metaItem}>
+<<<<<<< HEAD
               <Feather name="users" size={16} color={Colors.textSecondary} />
+=======
+              <Users size={16} color={Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.metaText}>
                 {course.studentsCount > 1000 
                   ? `${(course.studentsCount / 1000).toFixed(1)}k` 
@@ -87,7 +99,11 @@ export default function CourseDetailScreen() {
             </View>
             
             <View style={styles.metaItem}>
+<<<<<<< HEAD
               <Feather name="clock" size={16} color={Colors.textSecondary} />
+=======
+              <Clock size={16} color={Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.metaText}>{formatDuration(course.duration)}</Text>
             </View>
           </View>
@@ -98,14 +114,24 @@ export default function CourseDetailScreen() {
               onPress={handleSaveToggle}
             >
               {isSaved ? (
+<<<<<<< HEAD
                 <Feather name="bookmark" size={20} color={Colors.primary} />
               ) : (
                 <Feather name="bookmark" size={20} color={Colors.textSecondary} />
+=======
+                <BookmarkCheck size={20} color={Colors.primary} />
+              ) : (
+                <Bookmark size={20} color={Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               )}
             </Pressable>
             
             <Pressable style={styles.shareButton}>
+<<<<<<< HEAD
               <Feather name="share-2" size={20} color={Colors.textSecondary} />
+=======
+              <Share2 size={20} color={Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             </Pressable>
           </View>
         </View>
@@ -354,4 +380,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: Colors.textSecondary,
   },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6

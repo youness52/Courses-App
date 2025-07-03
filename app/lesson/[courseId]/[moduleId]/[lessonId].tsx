@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, ScrollView, Pressable, Platform, Alert } from 'react-native';
 import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
+<<<<<<< HEAD
 import { Feather } from '@expo/vector-icons';
+=======
+import { CheckCircle, Circle, ArrowLeft, ArrowRight } from 'lucide-react-native';
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import { useCourseStore } from '@/store/courseStore';
 import Colors from '@/constants/colors';
 import * as Haptics from 'expo-haptics';
@@ -219,7 +223,11 @@ export default function LessonScreen() {
               onPress={handlePreviousLesson}
               disabled={!previousLesson}
             >
+<<<<<<< HEAD
               <Feather name="arrow-left" size={20} color={previousLesson ? Colors.primary : Colors.textSecondary} />
+=======
+              <ArrowLeft size={20} color={previousLesson ? Colors.primary : Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={[styles.navButtonText, !previousLesson && styles.navButtonTextDisabled]}>
                 Previous
               </Text>
@@ -230,9 +238,15 @@ export default function LessonScreen() {
               onPress={handleToggleCompletion}
             >
               {isCompleted ? (
+<<<<<<< HEAD
                 <Feather name="check-circle" size={20} color={Colors.success} />
               ) : (
                 <Feather name="circle" size={20} color={Colors.textSecondary} />
+=======
+                <CheckCircle size={20} color={Colors.success} />
+              ) : (
+                <Circle size={20} color={Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               )}
               <Text style={[styles.completionText, isCompleted && styles.completionTextCompleted]}>
                 {isCompleted ? 'Completed' : 'Mark Complete'}
@@ -247,7 +261,11 @@ export default function LessonScreen() {
               <Text style={[styles.navButtonText, !nextLesson && styles.navButtonTextDisabled]}>
                 Next
               </Text>
+<<<<<<< HEAD
               <Feather name="arrow-right" size={20} color={nextLesson ? Colors.primary : Colors.textSecondary} />
+=======
+              <ArrowRight size={20} color={nextLesson ? Colors.primary : Colors.textSecondary} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             </Pressable>
           </View>
         </View>
@@ -369,4 +387,8 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     textAlign: 'center',
   },
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6

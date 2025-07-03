@@ -2,7 +2,11 @@
   "name": "expo-app",
   "main": "expo-router/entry",
   "version": "1.0.0",
+<<<<<<< HEAD
   "scripts": {
+=======
+   "scripts": {
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -13,7 +17,10 @@
     "@react-native-async-storage/async-storage": "2.1.2",
     "@react-navigation/native": "^7.1.6",
     "expo": "^53.0.4",
+<<<<<<< HEAD
     "expo-av": "~15.1.7",
+=======
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     "expo-blur": "~14.1.4",
     "expo-constants": "~17.1.4",
     "expo-font": "~13.3.0",
@@ -29,6 +36,10 @@
     "expo-symbols": "~0.4.4",
     "expo-system-ui": "~5.0.6",
     "expo-web-browser": "~14.1.6",
+<<<<<<< HEAD
+=======
+    "lucide-react-native": "^0.475.0",
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     "nativewind": "^4.1.23",
     "react": "19.0.0",
     "react-dom": "19.0.0",

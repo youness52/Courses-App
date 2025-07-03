@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { StyleSheet, View, Text, Pressable, ScrollView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+=======
+import { StyleSheet, View, Text, Pressable, ScrollView, Alert } from 'react-native';
+import { CheckCircle, XCircle, RotateCcw } from 'lucide-react-native';
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
 import Colors from '@/constants/colors';
 import { QuizQuestion } from '@/types/course';
 
@@ -29,12 +34,22 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
     if (isLastQuestion) {
       setShowResults(true);
       setQuizCompleted(true);
+<<<<<<< HEAD
 
       const correctAnswers = selectedAnswers.filter(
         (answer, index) => answer === questions[index].correctAnswer
       ).length;
 
       const passed = correctAnswers >= Math.ceil(questions.length * 0.7);
+=======
+      
+      // Calculate score
+      const correctAnswers = selectedAnswers.filter((answer, index) => 
+        answer === questions[index].correctAnswer
+      ).length;
+      
+      const passed = correctAnswers >= Math.ceil(questions.length * 0.7); // 70% to pass
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
       onComplete(passed);
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -55,13 +70,22 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
   };
 
   const calculateScore = () => {
+<<<<<<< HEAD
     const correctAnswers = selectedAnswers.filter(
       (answer, index) => answer === questions[index].correctAnswer
+=======
+    const correctAnswers = selectedAnswers.filter((answer, index) => 
+      answer === questions[index].correctAnswer
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     ).length;
     return {
       correct: correctAnswers,
       total: questions.length,
+<<<<<<< HEAD
       percentage: Math.round((correctAnswers / questions.length) * 100),
+=======
+      percentage: Math.round((correctAnswers / questions.length) * 100)
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
     };
   };
 
@@ -74,6 +98,7 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
         <View style={styles.resultsContainer}>
           <View style={[styles.scoreCard, passed ? styles.passedCard : styles.failedCard]}>
             {passed ? (
+<<<<<<< HEAD
               <Feather name="check-circle" size={48} color={Colors.success} />
             ) : (
               <Feather name="x-circle" size={48} color={Colors.error} />
@@ -89,12 +114,32 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
 
             <Text style={styles.percentageText}>{score.percentage}%</Text>
 
+=======
+              <CheckCircle size={48} color={Colors.success} />
+            ) : (
+              <XCircle size={48} color={Colors.error} />
+            )}
+            
+            <Text style={styles.scoreTitle}>
+              {passed ? 'Quiz Passed!' : 'Quiz Failed'}
+            </Text>
+            
+            <Text style={styles.scoreText}>
+              {score.correct} out of {score.total} correct
+            </Text>
+            
+            <Text style={styles.percentageText}>
+              {score.percentage}%
+            </Text>
+            
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             {!passed && (
               <Text style={styles.retryMessage}>
                 You need 70% or higher to pass. Try again!
               </Text>
             )}
           </View>
+<<<<<<< HEAD
 
           <View style={styles.reviewContainer}>
             <Text style={styles.reviewTitle}>Review Answers</Text>
@@ -103,40 +148,73 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
               const userAnswer = selectedAnswers[index];
               const isCorrect = userAnswer === question.correctAnswer;
 
+=======
+          
+          <View style={styles.reviewContainer}>
+            <Text style={styles.reviewTitle}>Review Answers</Text>
+            
+            {questions.map((question, index) => {
+              const userAnswer = selectedAnswers[index];
+              const isCorrect = userAnswer === question.correctAnswer;
+              
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               return (
                 <View key={question.id} style={styles.reviewQuestion}>
                   <Text style={styles.reviewQuestionText}>
                     {index + 1}. {question.question}
                   </Text>
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
                   <View style={styles.reviewAnswers}>
                     {question.options.map((option, optionIndex) => {
                       const isUserAnswer = userAnswer === optionIndex;
                       const isCorrectAnswer = optionIndex === question.correctAnswer;
+<<<<<<< HEAD
 
+=======
+                      
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
                       let answerStyle = styles.reviewAnswer;
                       if (isCorrectAnswer) {
                         answerStyle = [styles.reviewAnswer, styles.correctAnswer];
                       } else if (isUserAnswer && !isCorrect) {
                         answerStyle = [styles.reviewAnswer, styles.incorrectAnswer];
                       }
+<<<<<<< HEAD
 
+=======
+                      
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
                       return (
                         <View key={optionIndex} style={answerStyle}>
                           <Text style={styles.reviewAnswerText}>
                             {String.fromCharCode(65 + optionIndex)}. {option}
                           </Text>
                           {isCorrectAnswer && (
+<<<<<<< HEAD
                             <Feather name="check-circle" size={16} color={Colors.success} />
                           )}
                           {isUserAnswer && !isCorrect && (
                             <Feather name="x-circle" size={16} color={Colors.error} />
+=======
+                            <CheckCircle size={16} color={Colors.success} />
+                          )}
+                          {isUserAnswer && !isCorrect && (
+                            <XCircle size={16} color={Colors.error} />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
                           )}
                         </View>
                       );
                     })}
                   </View>
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
                   {question.explanation && (
                     <View style={styles.explanationContainer}>
                       <Text style={styles.explanationTitle}>Explanation:</Text>
@@ -147,10 +225,17 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
               );
             })}
           </View>
+<<<<<<< HEAD
 
           {!passed && (
             <Pressable style={styles.retryButton} onPress={handleRetry}>
               <Feather name="rotate-ccw" size={20} color="#fff" />
+=======
+          
+          {!passed && (
+            <Pressable style={styles.retryButton} onPress={handleRetry}>
+              <RotateCcw size={20} color="#fff" />
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
               <Text style={styles.retryButtonText}>Retry Quiz</Text>
             </Pressable>
           )}
@@ -165,6 +250,7 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
         <Text style={styles.questionCounter}>
           Question {currentQuestionIndex + 1} of {questions.length}
         </Text>
+<<<<<<< HEAD
 
         <View style={styles.progressBar}>
           <View
@@ -183,6 +269,26 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
           {currentQuestion.options.map((option, index) => {
             const isSelected = selectedAnswers[currentQuestionIndex] === index;
 
+=======
+        
+        <View style={styles.progressBar}>
+          <View 
+            style={[
+              styles.progressFill, 
+              { width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }
+            ]} 
+          />
+        </View>
+      </View>
+      
+      <ScrollView style={styles.questionContainer} showsVerticalScrollIndicator={false}>
+        <Text style={styles.questionText}>{currentQuestion.question}</Text>
+        
+        <View style={styles.optionsContainer}>
+          {currentQuestion.options.map((option, index) => {
+            const isSelected = selectedAnswers[currentQuestionIndex] === index;
+            
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             return (
               <Pressable
                 key={index}
@@ -202,9 +308,15 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
           })}
         </View>
       </ScrollView>
+<<<<<<< HEAD
 
       <View style={styles.footer}>
         <Pressable
+=======
+      
+      <View style={styles.footer}>
+        <Pressable 
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
           style={[styles.navButton, currentQuestionIndex === 0 && styles.disabledButton]}
           onPress={handlePrevious}
           disabled={currentQuestionIndex === 0}
@@ -213,6 +325,7 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
             Previous
           </Text>
         </Pressable>
+<<<<<<< HEAD
 
         <Pressable
           style={[
@@ -230,6 +343,15 @@ export default function QuizContent({ questions, onComplete }: QuizContentProps)
               !hasSelectedAnswer && styles.disabledText,
             ]}
           >
+=======
+        
+        <Pressable 
+          style={[styles.navButton, styles.nextButton, !hasSelectedAnswer && styles.disabledButton]}
+          onPress={handleNext}
+          disabled={!hasSelectedAnswer}
+        >
+          <Text style={[styles.navButtonText, styles.nextButtonText, !hasSelectedAnswer && styles.disabledText]}>
+>>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
             {isLastQuestion ? 'Finish' : 'Next'}
           </Text>
         </Pressable>
