@@ -35,11 +35,7 @@ export default function SearchBar({
           style={styles.clearButton} 
           onPress={() => onChangeText('')}
         >
-<<<<<<< HEAD
           <Feather name="x" size={18} color={Colors.textSecondary} />
-=======
-          <X size={18} color={Colors.textSecondary} />
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
         </Pressable>
       )}
     </View>
@@ -68,8 +64,4 @@ const styles = StyleSheet.create({
   clearButton: {
     padding: 4,
   },
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 5c0a012e26a79fad43bd2af96bfc732cc88218e6
